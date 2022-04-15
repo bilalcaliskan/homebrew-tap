@@ -5,12 +5,12 @@
 class TcpProxy < Formula
   desc "simple TCP proxy written with Golang using built-in net package"
   homepage "https://github.com/bilalcaliskan/tcp-proxy"
-  version "0.1.15"
+  version "0.1.16"
   license "apache-2.0"
 
   on_macos do
-    url "https://github.com/bilalcaliskan/tcp-proxy/releases/download/v0.1.15/tcp-proxy_0.1.15_darwin_x86_64.tar.gz"
-    sha256 "287f71b9cb341c44eb24e8bdfe0e27cb3c8ddcbabe42d21f15aedc18c6bee985"
+    url "https://github.com/bilalcaliskan/tcp-proxy/releases/download/v0.1.16/tcp-proxy_0.1.16_darwin_x86_64.tar.gz"
+    sha256 "78255e7a926d296110f5bbf86784b92a9e8af7baaa8d240dad3c1b3231fbf869"
 
     def install
       bin.install "tcp-proxy"
@@ -29,8 +29,8 @@ class TcpProxy < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bilalcaliskan/tcp-proxy/releases/download/v0.1.15/tcp-proxy_0.1.15_linux_x86_64.tar.gz"
-      sha256 "44a3f51cd7f6dbe84870dfbbfefe0b93b7685838797637bb0acf0a77c8f9c09d"
+      url "https://github.com/bilalcaliskan/tcp-proxy/releases/download/v0.1.16/tcp-proxy_0.1.16_linux_x86_64.tar.gz"
+      sha256 "fd32b8f34b4c92deb7fb8d5eb0399cb5fe1cf18b2c725ec9d08c86d235a91b31"
 
       def install
         bin.install "tcp-proxy"
