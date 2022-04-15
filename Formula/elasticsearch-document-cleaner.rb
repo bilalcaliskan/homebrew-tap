@@ -5,12 +5,12 @@
 class ElasticsearchDocumentCleaner < Formula
   desc "elasticsearch-document-cleaner cleans documents in an Elasticsearch index with specific conditions"
   homepage "https://github.com/bilalcaliskan/elasticsearch-document-cleaner"
-  version "0.1.15"
+  version "0.1.16"
   license "apache-2.0"
 
   on_macos do
-    url "https://github.com/bilalcaliskan/elasticsearch-document-cleaner/releases/download/v0.1.15/elasticsearch-document-cleaner_0.1.15_darwin_x86_64.tar.gz"
-    sha256 "b0768e77e73c8ccb1e62fa098616b14c65a2c9a098e6ff1a714ff1b489209ea8"
+    url "https://github.com/bilalcaliskan/elasticsearch-document-cleaner/releases/download/v0.1.16/elasticsearch-document-cleaner_0.1.16_darwin_x86_64.tar.gz"
+    sha256 "e4c24aeaf21b2d90dfff4d3ca272772f2ce6d3ddad582ca9d227c8337944a028"
 
     def install
       bin.install "elasticsearch-document-cleaner"
@@ -29,8 +29,8 @@ class ElasticsearchDocumentCleaner < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bilalcaliskan/elasticsearch-document-cleaner/releases/download/v0.1.15/elasticsearch-document-cleaner_0.1.15_linux_x86_64.tar.gz"
-      sha256 "2371a616d95ebc49d416f0a4511f93596ea029da1e6c84471de59bf82828358c"
+      url "https://github.com/bilalcaliskan/elasticsearch-document-cleaner/releases/download/v0.1.16/elasticsearch-document-cleaner_0.1.16_linux_x86_64.tar.gz"
+      sha256 "94777373d661d8a73bea507ab2891ce34d8275a49cecc1a07e46ffe2967be69b"
 
       def install
         bin.install "elasticsearch-document-cleaner"
