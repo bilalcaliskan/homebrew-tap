@@ -5,12 +5,12 @@
 class KubePodTerminator < Formula
   desc "kube-pod-terminator discovers pods which are at 'Evicted' or 'Terminating' state and clears them from Kubernetes cluster"
   homepage "https://github.com/bilalcaliskan/kube-pod-terminator"
-  version "0.1.26"
+  version "0.1.27"
   license "apache-2.0"
 
   on_macos do
-    url "https://github.com/bilalcaliskan/kube-pod-terminator/releases/download/v0.1.26/kube-pod-terminator_0.1.26_darwin_x86_64.tar.gz"
-    sha256 "30be37437b4c9b3599ae5c0a114b5246c2e1b53dbec0d3d879a1f5785eae51dc"
+    url "https://github.com/bilalcaliskan/kube-pod-terminator/releases/download/v0.1.27/kube-pod-terminator_0.1.27_darwin_x86_64.tar.gz"
+    sha256 "5110e7cae4409e23960d44339d09c4ed7344125708f4306966b15656fa3d9983"
 
     def install
       bin.install "kube-pod-terminator"
@@ -29,8 +29,8 @@ class KubePodTerminator < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bilalcaliskan/kube-pod-terminator/releases/download/v0.1.26/kube-pod-terminator_0.1.26_linux_x86_64.tar.gz"
-      sha256 "26830cebe1d5ab177cdd6fab5174a4d1af397c5db9580858dd543b762fbd3091"
+      url "https://github.com/bilalcaliskan/kube-pod-terminator/releases/download/v0.1.27/kube-pod-terminator_0.1.27_linux_x86_64.tar.gz"
+      sha256 "d24109f73e8fc5baaa5d8c089b76ed258efaf67091b1d07e8b3baff9bce1c497"
 
       def install
         bin.install "kube-pod-terminator"
