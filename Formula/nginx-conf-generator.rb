@@ -5,12 +5,12 @@
 class NginxConfGenerator < Formula
   desc "nginx-conf-generator gets the port of NodePort type services from a cluster and manages Nginx configuration"
   homepage "https://github.com/bilalcaliskan/nginx-conf-generator"
-  version "5.0.2"
+  version "5.0.3"
   license "apache-2.0"
 
   on_macos do
-    url "https://github.com/bilalcaliskan/nginx-conf-generator/releases/download/v5.0.2/nginx-conf-generator_5.0.2_darwin_x86_64.tar.gz"
-    sha256 "f0262d73d01cb6e8b32f32e9f8c0b413e84dd613c72b35bf29f96db219a29447"
+    url "https://github.com/bilalcaliskan/nginx-conf-generator/releases/download/v5.0.3/nginx-conf-generator_5.0.3_darwin_x86_64.tar.gz"
+    sha256 "54b1f387a5f8e5012063c802215698722319a9680ff944ff7c6210529e960a24"
 
     def install
       bin.install "nginx-conf-generator"
@@ -29,8 +29,8 @@ class NginxConfGenerator < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bilalcaliskan/nginx-conf-generator/releases/download/v5.0.2/nginx-conf-generator_5.0.2_linux_x86_64.tar.gz"
-      sha256 "8d38699f5b0314f5192e7ad4a67c76a23abf40a14b17ebcbd77e6bc52ae72206"
+      url "https://github.com/bilalcaliskan/nginx-conf-generator/releases/download/v5.0.3/nginx-conf-generator_5.0.3_linux_x86_64.tar.gz"
+      sha256 "d00ce80a6e6498dd71b5eee2bd4f8af9d0207383f2edbe145810695280a74f2c"
 
       def install
         bin.install "nginx-conf-generator"
