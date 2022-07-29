@@ -5,12 +5,12 @@
 class S3SubstringFinder < Formula
   desc "s3-substring-finder accesses to S3 buckets and finds txt files which contains specific substring"
   homepage "https://github.com/bilalcaliskan/s3-substring-finder"
-  version "0.0.26"
+  version "0.0.27"
   license "apache-2.0"
 
   on_macos do
-    url "https://github.com/bilalcaliskan/s3-substring-finder/releases/download/v0.0.26/s3-substring-finder_0.0.26_darwin_x86_64.tar.gz"
-    sha256 "083eab94d60103538f45b48337f400523eae00b2aacf72db2b6e4adfcfd5f371"
+    url "https://github.com/bilalcaliskan/s3-substring-finder/releases/download/v0.0.27/s3-substring-finder_0.0.27_darwin_x86_64.tar.gz"
+    sha256 "1c748307e87c8ac0dea40c0b38a49428cf5891e2bac357ff555325158ab9c92d"
 
     def install
       bin.install "s3-substring-finder"
@@ -29,8 +29,8 @@ class S3SubstringFinder < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bilalcaliskan/s3-substring-finder/releases/download/v0.0.26/s3-substring-finder_0.0.26_linux_x86_64.tar.gz"
-      sha256 "ca918737719c31a4d9b1014e4d21f95e60f9cb76edc3ae6f1c91a307c508f3f4"
+      url "https://github.com/bilalcaliskan/s3-substring-finder/releases/download/v0.0.27/s3-substring-finder_0.0.27_linux_x86_64.tar.gz"
+      sha256 "315c9bf3172d138db41ab6200b3e19fd17c2b2b688d3e513567c4e5db77c621a"
 
       def install
         bin.install "s3-substring-finder"
