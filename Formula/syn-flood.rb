@@ -5,12 +5,12 @@
 class SynFlood < Formula
   desc "syn-flood starts a syn flood attack with raw sockets. created for learning low level network ops"
   homepage "https://github.com/bilalcaliskan/syn-flood"
-  version "1.0.51"
+  version "1.1.0"
   license "apache-2.0"
 
   on_macos do
-    url "https://github.com/bilalcaliskan/syn-flood/releases/download/v1.0.51/syn-flood_1.0.51_darwin_x86_64.tar.gz"
-    sha256 "0f5d9ae847e71beb1d072a11acbacb0b1aac4a40ed4c3c4ac2f0142089855569"
+    url "https://github.com/bilalcaliskan/syn-flood/releases/download/v1.1.0/syn-flood_1.1.0_darwin_x86_64.tar.gz"
+    sha256 "88806e364a440a9e6b0b4b3c5ac9ad5528dc88e361cde5c7ab78334419a95359"
 
     def install
       bin.install "syn-flood"
@@ -29,8 +29,8 @@ class SynFlood < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bilalcaliskan/syn-flood/releases/download/v1.0.51/syn-flood_1.0.51_linux_x86_64.tar.gz"
-      sha256 "cd42506815a126f27010c5d57738a431f94d7bbd1d322f810cfcd6b195850323"
+      url "https://github.com/bilalcaliskan/syn-flood/releases/download/v1.1.0/syn-flood_1.1.0_linux_x86_64.tar.gz"
+      sha256 "ab6ea0ecf8e0464e0e552a5e2edbecb32a605fbc8e9d74036c2be33147af9cca"
 
       def install
         bin.install "syn-flood"
