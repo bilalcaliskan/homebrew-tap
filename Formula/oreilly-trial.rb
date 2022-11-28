@@ -5,12 +5,12 @@
 class OreillyTrial < Formula
   desc "oreilly-trial creates a trial Oreilly account for 10 days"
   homepage "https://github.com/bilalcaliskan/oreilly-trial"
-  version "2.1.12"
+  version "2.1.13"
   license "apache-2.0"
 
   on_macos do
-    url "https://github.com/bilalcaliskan/oreilly-trial/releases/download/v2.1.12/oreilly-trial_2.1.12_darwin_x86_64.tar.gz"
-    sha256 "eab68254974bb15e3b2a152492835d3779cca621d1aabfa7cbb76a3ae9977550"
+    url "https://github.com/bilalcaliskan/oreilly-trial/releases/download/v2.1.13/oreilly-trial_2.1.13_darwin_x86_64.tar.gz"
+    sha256 "e0fe5e012ab47512a0f3caa1c6fa3ca0328ed8b3cd8ed402c2b8189edac412f5"
 
     def install
       bin.install "oreilly-trial"
@@ -29,8 +29,8 @@ class OreillyTrial < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bilalcaliskan/oreilly-trial/releases/download/v2.1.12/oreilly-trial_2.1.12_linux_x86_64.tar.gz"
-      sha256 "c075e67c7bf0e8340c761d61e5abcd4f83407465bda927db81468adb2c482c30"
+      url "https://github.com/bilalcaliskan/oreilly-trial/releases/download/v2.1.13/oreilly-trial_2.1.13_linux_x86_64.tar.gz"
+      sha256 "62e5faeb96a4eea31b5ceb9b008a3f9ebb6c3b5321886d34d150d8fb4c0efde2"
 
       def install
         bin.install "oreilly-trial"
