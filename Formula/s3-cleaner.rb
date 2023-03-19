@@ -5,12 +5,12 @@
 class S3Cleaner < Formula
   desc "s3-cleaner does something"
   homepage "https://github.com/bilalcaliskan/s3-cleaner"
-  version "0.2.5"
+  version "0.2.6"
   license "apache-2.0"
 
   on_macos do
-    url "https://github.com/bilalcaliskan/s3-cleaner/releases/download/v0.2.5/s3-cleaner_0.2.5_darwin_x86_64.tar.gz"
-    sha256 "dc3178af80a3f1778fd647d5c3e69b8ad65c02eccfacc8a0805f0b5884f7fb31"
+    url "https://github.com/bilalcaliskan/s3-cleaner/releases/download/v0.2.6/s3-cleaner_0.2.6_darwin_x86_64.tar.gz"
+    sha256 "d06f0b104c001136ffd642ab4fc9f2af99cf3d5f5d5fa91f83958c28d41cde91"
 
     def install
       bin.install "s3-cleaner"
@@ -29,8 +29,8 @@ class S3Cleaner < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bilalcaliskan/s3-cleaner/releases/download/v0.2.5/s3-cleaner_0.2.5_linux_x86_64.tar.gz"
-      sha256 "941b6d29788e5d2c4527a42b710e975855b25500bd5dfe3e28c3d2b55cea2683"
+      url "https://github.com/bilalcaliskan/s3-cleaner/releases/download/v0.2.6/s3-cleaner_0.2.6_linux_x86_64.tar.gz"
+      sha256 "49b9a92a42f036bd8e84c53c136c6409fbf63ef7fbfecada8f964b2e86dd64ea"
 
       def install
         bin.install "s3-cleaner"
