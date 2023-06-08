@@ -5,12 +5,12 @@
 class S3Manager < Formula
   desc "s3-manager does something"
   homepage "https://github.com/bilalcaliskan/s3-manager"
-  version "0.0.8"
+  version "0.0.9"
   license "apache-2.0"
 
   on_macos do
-    url "https://github.com/bilalcaliskan/s3-manager/releases/download/v0.0.8/s3-manager_0.0.8_darwin_x86_64.tar.gz"
-    sha256 "644b647ffbea8322b1c7ab12d90664ffdacc46cd59248a05aa226d5c9e8b207a"
+    url "https://github.com/bilalcaliskan/s3-manager/releases/download/v0.0.9/s3-manager_0.0.9_darwin_x86_64.tar.gz"
+    sha256 "0cbd13e3df42cdc28f494f5c8b23d796087a506b7a7f8893443bd7df53f948ff"
 
     def install
       bin.install "s3-manager"
@@ -29,8 +29,8 @@ class S3Manager < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bilalcaliskan/s3-manager/releases/download/v0.0.8/s3-manager_0.0.8_linux_x86_64.tar.gz"
-      sha256 "b9eb83c9b121e57f6cbf90daac4495be365089008557554af47d25d2c4311573"
+      url "https://github.com/bilalcaliskan/s3-manager/releases/download/v0.0.9/s3-manager_0.0.9_linux_x86_64.tar.gz"
+      sha256 "e43f170f62359c7c2bf12df787b508e107d0bd46e021efa4989b733d6de0af55"
 
       def install
         bin.install "s3-manager"
