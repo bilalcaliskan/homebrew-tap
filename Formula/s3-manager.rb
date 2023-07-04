@@ -5,12 +5,12 @@
 class S3Manager < Formula
   desc "s3-manager is a tool written with Golang that helps you take the various discovery/management related actions on your target AWS S3 bucket."
   homepage "https://github.com/bilalcaliskan/s3-manager"
-  version "1.0.8"
+  version "1.0.13"
   license "apache-2.0"
 
   on_macos do
-    url "https://github.com/bilalcaliskan/s3-manager/releases/download/v1.0.8/s3-manager_1.0.8_darwin_x86_64.tar.gz"
-    sha256 "1193842acbb0ccb4826bbb8bb54c75319340bcfca57438c4b40023c0e6230d20"
+    url "https://github.com/bilalcaliskan/s3-manager/releases/download/v1.0.13/s3-manager_Darwin_x86_64.tar.gz"
+    sha256 "8dc0cbab87623b75e1651fd711137ddae5903bab5d448f27ea6da7c9d4db82b9"
 
     def install
       bin.install "s3-manager"
@@ -29,8 +29,8 @@ class S3Manager < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bilalcaliskan/s3-manager/releases/download/v1.0.8/s3-manager_1.0.8_linux_x86_64.tar.gz"
-      sha256 "d8ebb937e6960dc7983f0a24f7555a199c4860a2dadf0e46b32a5dd63869fe8c"
+      url "https://github.com/bilalcaliskan/s3-manager/releases/download/v1.0.13/s3-manager_Linux_x86_64.tar.gz"
+      sha256 "de3095bb14c906df504bf996132b7ca452c5dfda92859efdfa65eeaea7e6a22a"
 
       def install
         bin.install "s3-manager"
