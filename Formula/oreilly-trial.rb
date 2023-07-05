@@ -5,21 +5,21 @@
 class OreillyTrial < Formula
   desc "oreilly-trial creates a trial Oreilly account for 10 days"
   homepage "https://github.com/bilalcaliskan/oreilly-trial"
-  version "2.2.11"
+  version "2.2.12"
   license "apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/bilalcaliskan/oreilly-trial/releases/download/v2.2.11/oreilly-trial_2.2.11_darwin_x86_64.tar.gz"
-      sha256 "4ccf497f54e9b8268ba58778c0dbe571ce35aae951b9224bbf3cfddd1c1039da"
+    if Hardware::CPU.arm?
+      url "https://github.com/bilalcaliskan/oreilly-trial/releases/download/v2.2.12/oreilly-trial_2.2.12_darwin_arm64.tar.gz"
+      sha256 "f43aa1e028779b1cf04dc6e7f3fd112b3c2bae03facce0c7d4f23b73e8b24f3d"
 
       def install
         bin.install "oreilly-trial"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/bilalcaliskan/oreilly-trial/releases/download/v2.2.11/oreilly-trial_2.2.11_darwin_arm64.tar.gz"
-      sha256 "ecbb549f5d19dcae2daacc61f35dec06849a06e2fa4a4dbe87d63799d653eba1"
+    if Hardware::CPU.intel?
+      url "https://github.com/bilalcaliskan/oreilly-trial/releases/download/v2.2.12/oreilly-trial_2.2.12_darwin_amd64.tar.gz"
+      sha256 "4d14d4dc51a02ad8c98c3d21209f6f3880ac3ce252e673bc8a8305f80f3294e2"
 
       def install
         bin.install "oreilly-trial"
@@ -28,17 +28,17 @@ class OreillyTrial < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/bilalcaliskan/oreilly-trial/releases/download/v2.2.11/oreilly-trial_2.2.11_linux_x86_64.tar.gz"
-      sha256 "897f6982878fa63444fdddcba2085e3d08f754130cad2e4346bb2e23189e5aa0"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bilalcaliskan/oreilly-trial/releases/download/v2.2.12/oreilly-trial_2.2.12_linux_arm64.tar.gz"
+      sha256 "ab94ba91e7913792395a3beb4f6dd9425f24bcd80b538013bdbf50051955bc2f"
 
       def install
         bin.install "oreilly-trial"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bilalcaliskan/oreilly-trial/releases/download/v2.2.11/oreilly-trial_2.2.11_linux_arm64.tar.gz"
-      sha256 "7a0e1fa8450c7979b12bb76cc73f4fbc1abca3d902e3d20df5ca9ff66f86a8c4"
+    if Hardware::CPU.intel?
+      url "https://github.com/bilalcaliskan/oreilly-trial/releases/download/v2.2.12/oreilly-trial_2.2.12_linux_amd64.tar.gz"
+      sha256 "727518cc4ad313ea4e77c40d5777de32ae5d26138bd8cfe348a198229d4fedb4"
 
       def install
         bin.install "oreilly-trial"
