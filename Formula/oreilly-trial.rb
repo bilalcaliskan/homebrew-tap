@@ -5,32 +5,40 @@
 class OreillyTrial < Formula
   desc "oreilly-trial creates a trial Oreilly account for 10 days"
   homepage "https://github.com/bilalcaliskan/oreilly-trial"
-  version "2.2.8"
+  version "2.2.11"
   license "apache-2.0"
 
   on_macos do
-    url "https://github.com/bilalcaliskan/oreilly-trial/releases/download/v2.2.8/oreilly-trial_2.2.8_darwin_x86_64.tar.gz"
-    sha256 "2daa935742bc931bff4c7dbab8aa9a155c93463eba44f104f153810818c2c006"
+    if Hardware::CPU.intel?
+      url "https://github.com/bilalcaliskan/oreilly-trial/releases/download/v2.2.11/oreilly-trial_2.2.11_darwin_x86_64.tar.gz"
+      sha256 "4ccf497f54e9b8268ba58778c0dbe571ce35aae951b9224bbf3cfddd1c1039da"
 
-    def install
-      bin.install "oreilly-trial"
+      def install
+        bin.install "oreilly-trial"
+      end
     end
-
     if Hardware::CPU.arm?
-      def caveats
-        <<~EOS
-          The darwin_arm64 architecture is not supported for the OreillyTrial
-          formula at this time. The darwin_amd64 binary may work in compatibility
-          mode, but it might not be fully supported.
-        EOS
+      url "https://github.com/bilalcaliskan/oreilly-trial/releases/download/v2.2.11/oreilly-trial_2.2.11_darwin_arm64.tar.gz"
+      sha256 "ecbb549f5d19dcae2daacc61f35dec06849a06e2fa4a4dbe87d63799d653eba1"
+
+      def install
+        bin.install "oreilly-trial"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bilalcaliskan/oreilly-trial/releases/download/v2.2.8/oreilly-trial_2.2.8_linux_x86_64.tar.gz"
-      sha256 "856afa650664620ae614324a75a302699817dacd8f81e4665608490ce5a8f422"
+      url "https://github.com/bilalcaliskan/oreilly-trial/releases/download/v2.2.11/oreilly-trial_2.2.11_linux_x86_64.tar.gz"
+      sha256 "897f6982878fa63444fdddcba2085e3d08f754130cad2e4346bb2e23189e5aa0"
+
+      def install
+        bin.install "oreilly-trial"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bilalcaliskan/oreilly-trial/releases/download/v2.2.11/oreilly-trial_2.2.11_linux_arm64.tar.gz"
+      sha256 "7a0e1fa8450c7979b12bb76cc73f4fbc1abca3d902e3d20df5ca9ff66f86a8c4"
 
       def install
         bin.install "oreilly-trial"
