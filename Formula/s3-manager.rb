@@ -5,21 +5,21 @@
 class S3Manager < Formula
   desc "s3-manager is a tool written with Golang that helps you take the various discovery/management related actions on your target AWS S3 bucket."
   homepage "https://github.com/bilalcaliskan/s3-manager"
-  version "2.1.1"
+  version "3.0.0"
   license "apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/bilalcaliskan/s3-manager/releases/download/v2.1.1/s3-manager_2.1.1_darwin_amd64.tar.gz"
-      sha256 "8ae3b033a30da522d7890b46fb891f9226f544c1acf316872a59e52d658f1b76"
+    if Hardware::CPU.arm?
+      url "https://github.com/bilalcaliskan/s3-manager/releases/download/v3.0.0/s3-manager_3.0.0_darwin_arm64.tar.gz"
+      sha256 "77ae0ec2c04388ce3f062de5eb0eb865efa20d0a9276c7d726f0d5fa82148d33"
 
       def install
         bin.install "s3-manager"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/bilalcaliskan/s3-manager/releases/download/v2.1.1/s3-manager_2.1.1_darwin_arm64.tar.gz"
-      sha256 "ca0ef67e79c3bfa5a8bf9e1df2330757d2d5e8f0985d3efe5264a7e24bef85a0"
+    if Hardware::CPU.intel?
+      url "https://github.com/bilalcaliskan/s3-manager/releases/download/v3.0.0/s3-manager_3.0.0_darwin_amd64.tar.gz"
+      sha256 "3aea94d1fddd58feca99e85e674232a0704edaead92170db6b39bc33cb22f1af"
 
       def install
         bin.install "s3-manager"
@@ -29,16 +29,16 @@ class S3Manager < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bilalcaliskan/s3-manager/releases/download/v2.1.1/s3-manager_2.1.1_linux_arm64.tar.gz"
-      sha256 "3ae2e649ae7e6aed2ceefbe13f2aa82efbbec7f8e9878ff5a1d2776a7f3f42d5"
+      url "https://github.com/bilalcaliskan/s3-manager/releases/download/v3.0.0/s3-manager_3.0.0_linux_arm64.tar.gz"
+      sha256 "a487009137c5ffa4729d4d345b34a56d2a34818a9f61610861f6d7cbf98af412"
 
       def install
         bin.install "s3-manager"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bilalcaliskan/s3-manager/releases/download/v2.1.1/s3-manager_2.1.1_linux_amd64.tar.gz"
-      sha256 "8887a7ece79eafbc18be6df3a17b469e1990b4e6463dc7c3fb429685910e2ac7"
+      url "https://github.com/bilalcaliskan/s3-manager/releases/download/v3.0.0/s3-manager_3.0.0_linux_amd64.tar.gz"
+      sha256 "8773cb34f10809ec1a4ab03cbd98b4c837411028a63d6adf8281dc91c53e3d5b"
 
       def install
         bin.install "s3-manager"
