@@ -5,18 +5,18 @@
 class KubePodTerminator < Formula
   desc "kube-pod-terminator discovers pods which are at 'Evicted' or 'Terminating' state and clears them from Kubernetes cluster"
   homepage "https://github.com/bilalcaliskan/kube-pod-terminator"
-  version "4.0.2"
+  version "4.0.3"
   license "apache-2.0"
 
   on_macos do
-    url "https://github.com/bilalcaliskan/kube-pod-terminator/releases/download/v4.0.2/kube-pod-terminator_4.0.2_darwin_amd64.tar.gz"
-    sha256 "703ea63e9e1069853b00a03127edb47200087335c512e5875a5c9dfbb3ff43c3"
+    url "https://github.com/bilalcaliskan/kube-pod-terminator/releases/download/v4.0.3/kube-pod-terminator_4.0.3_darwin_amd64.tar.gz"
+    sha256 "fd80a0e513cca3354c6139025f8d551cbcc113cf35c0c6d01058340a4f6b75f3"
 
     def install
       bin.install "kube-pod-terminator"
     end
 
-    if Hardware::CPU.arm?
+    on_arm do
       def caveats
         <<~EOS
           The darwin_arm64 architecture is not supported for the KubePodTerminator
@@ -28,12 +28,14 @@ class KubePodTerminator < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/bilalcaliskan/kube-pod-terminator/releases/download/v4.0.2/kube-pod-terminator_4.0.2_linux_amd64.tar.gz"
-      sha256 "d7910ee0c3c382ad88418736bdb403f74bc572e90b793492571df36104a3e075"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/bilalcaliskan/kube-pod-terminator/releases/download/v4.0.3/kube-pod-terminator_4.0.3_linux_amd64.tar.gz"
+        sha256 "71e01f95d6b21c554dd664d3fe41701e078c51ed87486f23089803a28a64c3ce"
 
-      def install
-        bin.install "kube-pod-terminator"
+        def install
+          bin.install "kube-pod-terminator"
+        end
       end
     end
   end
