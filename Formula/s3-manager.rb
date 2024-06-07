@@ -5,21 +5,21 @@
 class S3Manager < Formula
   desc "s3-manager is a tool written with Golang that helps you take the various discovery/management related actions on your target AWS S3 bucket."
   homepage "https://github.com/bilalcaliskan/s3-manager"
-  version "3.0.22"
+  version "3.0.23"
   license "apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/bilalcaliskan/s3-manager/releases/download/v3.0.22/s3-manager_3.0.22_darwin_amd64.tar.gz"
-      sha256 "543049542f8af317b0bf068e442aa1d7e1d9b9c78f8960f0ccca977305bf1dd7"
+    on_intel do
+      url "https://github.com/bilalcaliskan/s3-manager/releases/download/v3.0.23/s3-manager_3.0.23_darwin_amd64.tar.gz"
+      sha256 "906a822f365d5cca8e0d5f4affb032490abc6a9e25dd914ff39ae9d5c3250844"
 
       def install
         bin.install "s3-manager"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/bilalcaliskan/s3-manager/releases/download/v3.0.22/s3-manager_3.0.22_darwin_arm64.tar.gz"
-      sha256 "4ba979f2241552e79fb245cd45b9ca2a35e61fb454923c7c6216065495aaa31a"
+    on_arm do
+      url "https://github.com/bilalcaliskan/s3-manager/releases/download/v3.0.23/s3-manager_3.0.23_darwin_arm64.tar.gz"
+      sha256 "af934b552d7e5ece1d2cd7b132a843c894c25a88a6731c6985f5ed3223fde89f"
 
       def install
         bin.install "s3-manager"
@@ -28,20 +28,24 @@ class S3Manager < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/bilalcaliskan/s3-manager/releases/download/v3.0.22/s3-manager_3.0.22_linux_amd64.tar.gz"
-      sha256 "579cadbc21219c379b453a7a9944e7c8a81c9ea417e06cc0ad2f6d91b5f9f813"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/bilalcaliskan/s3-manager/releases/download/v3.0.23/s3-manager_3.0.23_linux_amd64.tar.gz"
+        sha256 "728fdc97d5690d429f0bda3c009412e3abb36a1a6aad9fd3d1079089407f1572"
 
-      def install
-        bin.install "s3-manager"
+        def install
+          bin.install "s3-manager"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bilalcaliskan/s3-manager/releases/download/v3.0.22/s3-manager_3.0.22_linux_arm64.tar.gz"
-      sha256 "34d5de7d5205d2c0c37397d26f6ad61211e02933e74f6c878b676a8a64f2742c"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/bilalcaliskan/s3-manager/releases/download/v3.0.23/s3-manager_3.0.23_linux_arm64.tar.gz"
+        sha256 "721ad9c3d8330071cea1e1a30030d5300f5f8522850adbcc49e53b6bdf3d66e3"
 
-      def install
-        bin.install "s3-manager"
+        def install
+          bin.install "s3-manager"
+        end
       end
     end
   end
